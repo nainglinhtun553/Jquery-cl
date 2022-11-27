@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get and Set tutorials</title>
+</head>
+<body>
+	<ul class="myList">
+		<li>apple</li>
+		<li>orange</li>
+
+	</ul>
+	
+</body>
+<script src="jquery.min.js"></script>
+<script>
+	// append prepend after before
+	// append = ရှိပြီးတားကို နောက်ထပ်အသစ်တစ်ခု ထက်ထည့်သောအခါ အသုံးပြုသည်။ နောက်ဆုံးကနေ ထည့်သွားမည် ဖြစ်သည်။
+	// prepend = မူလရှိသောကောင်ရဲ့ အရှေ့မှာ ထည့်သောအခါ အသုံးပြုသည်။
+	//before = before ဆိုတာက parent element တစ်ခုလုံးရဲ့ အရှေ့မှာ ထပ်ထည့်ခြင်းကို ဆိုလိုသည်။
+	// after = after ဆိုတာက parent element တစ်ခုလုံးရဲ့ အနောက်မှာ ထပ်ထည့်ခြင်းကို ဆိုလိုသည်။
+
+	/******/
+	// append and prepend သည် child မှာ သက်ရောက်မှု ရှိသည်။
+	// before and after သည် parent မှာ သက်ရောက်မှု ရှိသည်။
+
+
+
+/**remove element from js***/
+//remove မှာ child and parent‌ရော နှစ်ခုလုံးအကျိုးသက်‌ရောက်မှုရှိသည်။
+// remove သည် parent and childနှစ်ခုလုံးကို ဖျက်ပေးသည်။
+
+// emply သည် parent element ကို ဖျက်မသွားပါ။ child element ကိုသာ ဖျက်ပေးသည်။	
+	
+
+	$(document).ready(function(){
+		
+		$('.myList').prepend(`<li>this is previous</li>`);
+		$('.myList').append(`<li>Three</li>`);
+
+
+
+		$('.myList').before(`<ul class="myFirst" style="color:red;background-color:blue;width:300px;">
+		<li>One</li>
+		<li>Two</li>
+
+	</ul>`);
+
+
+		$('.myList').after(`<ul class="myFirst">
+		<li>One</li>
+		<li>Two</li>
+
+	</ul>`);
+
+
+		// using remove method in jquery
+		 // $('.myList').empty();
+
+
+
+
+
+	});
+</script>
+</html> 

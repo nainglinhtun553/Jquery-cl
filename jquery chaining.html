@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jquery Animate Tutorials</title>
+
+	<style>
+		img{
+			width:700px;
+			margin-left:300px;
+			display:none;
+		}
+		.btn-group{
+			margin-left:550px;
+			}
+
+		button{
+			background-color:#616161;
+			color:white;
+			border:1px solid white;
+			font-size:20px;
+			padding:5px;
+			border-radius: 5px;
+		}
+
+		.box{
+			background-color:red;
+			width:200px;
+			height:200px;
+			border-radius: 50%;
+			margin-top:50px;
+			border:10px solid black;
+			position:relative;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- <h1 id="heading">JQuery Testing</h1> -->
+	<div class="btn-group">
+		<button id="showBtn">Show</button>
+		<button id="hideBtn">Hide</button>
+		<button id="toggleBtn">Toggle</button>
+		
+	</div>
+	<img src="image/d.jpg" id="myImg" alt="">
+	<div class="container">
+		<button class="animationBtn">Animation</button>
+		<button class="stop">Stop</button>
+		<button class="chaining">Chaining</button>
+		<div class="box">
+			
+		</div>
+	</div>
+
+	<h1 id="codelab">CODE LAB</h1>	
+</body>
+	<script src="jquery.min.js"></script>
+	<script>
+		// function for show hide and toggle button of the image
+		$(document).ready(function(){
+				$("#showBtn").click(function(){
+					$("#myImg").show(2000);
+				});
+
+
+				$("#hideBtn").click(function(){
+					$("#myImg").hide(2000);
+				});
+
+
+				$("#toggleBtn").click(function(){
+					$("#myImg").slideToggle(2000);
+				});
+
+				// $(".animationBtn").click(function(){
+				// 	$(".box").animate({
+				// 		left: "300px", // ဘယ်ဘက်ကနေ ၃၀၀ ရွေ့
+				// 		top: "200px",
+				// 		width:"+=150px",
+				// 		height:"+=150px",
+				// 		// 300 mean time taken
+				// 	},3000,function(){
+				// 		$("#myImg").show(2000);
+				// 	})
+				// })
+
+				$(".animationBtn").click(function(){
+					$(".box").animate({
+						left: "300px", // ဘယ်ဘက်ကနေ ၃၀၀ ရွေ့
+						top: "200px",
+						width:"+=150px",
+						height:"+=150px",
+						// 300 mean time taken
+					},3000,function(){
+
+					})
+				});
+				// when processing the animate function to stop this function, we are used the stop method in jquery.
+
+				$(".stop").click(function(){
+						$(".box").stop();
+				})
+
+				// for chaining button
+				$(".chaining").click(function(){
+					// chaining ဆိုတာက လုပ်ငန်းများစွာကို တစ်ဆက်တည်း လုပ်စေရန် ခိုင်းစေခြင်း ဖြစ်သည်။
+					$("#codelab").css('color',"red").hide(2000).show(2000);
+				});
+
+			});
+	</script>
+</html>

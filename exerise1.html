@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JQuery Tutorials</title>
+</head>
+<body>
+	<h1 id="heading">Jquery Testing</h1>
+
+
+</body>
+
+<script src="jquery.min.js"></script>
+<script>
+	// document.getElementById("heading").innerHTML="Welcome from CodeLab";
+	// the following syntex is equal to the document.queryselector in js.
+	// the syntex of .html is equal to InnerHTML in js.
+	// $("#heading").html("welcome to Jquery");
+
+	
+
+
+	// document.querySelector("#heading").addEventListener("click",function(){
+	// 	this.style.display="none";
+	// })
+
+
+	// this is jquery syntex of function.
+	$("#heading").click(function() {
+		$(this).hide(1000,function(){
+			console.log("hello welcome from code Lab");
+		});
+	});
+
+
+	
+</script>
+</html>

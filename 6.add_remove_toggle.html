@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Add Remove and Toggle Tutorials</title>
+
+	<style>
+		/*.title{
+			color:red;
+		}
+
+		.bg-dark{
+			color:red;			
+			background-color:blue;
+			border:1px solid black;
+			font-style:italic;
+			font-size:30px;
+			
+		}
+		.second{
+			color:black;		
+
+
+			}*/
+
+		.bg-dark{
+			background-color:black;
+		}
+	</style>
+</head>
+<body>
+	<!-- <h1 class="title">Hello World</h1>
+	<h2 class="second">result</h2>
+	<button id="remove">add and remove style</button> -->
+
+
+
+	<button>Light/Dark</button>
+	
+</body>
+<script src="jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		
+
+		
+		//(".title").css("color")
+		// console.log($(".title").css("color"));
+
+
+		// jquery ကနေ color ထည့်ချင်သောအခါ အသုံးပြုသည်။
+		// $(".second").addClass("bg-dark");
+		// $(".second").removeClass("bg-dark");
+		// ထည့်ပြီးတား class ကို jquery မှ လှမ်းပယ်ချင်ရင် အသုံးပြုသည်။
+			// $(".second").removeClass("bg-dark");
+
+
+
+
+			// $('#remove').click(function(){
+				// ရှိပြီးသား class ကို remove လုပ် မရှိရင် add လုပ်ဆိုတာကို နှစ်ခုပေါင်းပြီး ထည့်ချင်တဲ့အခါ toggleClass ကို အသုံးပြုသည်။
+				// $(".second").toggleClass("bg-dark");
+			// });
+
+
+
+			$('button').click(function(){
+				$('body').toggleClass('bg-dark');
+			})
+		
+
+
+	});
+</script>
+</html>

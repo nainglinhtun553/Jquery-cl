@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>this is exerise tutorials</title>
+	<style>
+
+				
+	</style>
+</head>
+<body>
+
+	<h1 id="h1">This is heading 1</h1>
+	<button id="btn">Delete</button>
+	<button id="addbtn">Add</button>
+
+	
+
+
+	
+</body>
+	<script src="jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$('#btn').click(function(){
+				$('#h1').remove();
+			})
+		});
+
+
+		$('#addbtn').click(function(){
+			$('#h1').append(`<h1>This is new heading.</h1>`);
+
+		})
+		
+	</script>
+</html>

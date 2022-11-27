@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Get and Set tutorials</title>
+</head>
+<body>
+	<h1 title="codelab" style="color:red;">Hello Welcome from code lab</h1>
+
+	<input type="text" id="userName">
+	<select name="" id="myFood">
+		<option value="apple">A</option>
+		<option value="Banana">B</option>
+		<option value="coconut">C</option>
+	</select>
+	<button>Register</button>
+
+
+	
+</body>
+<script src="jquery.min.js"></script>
+<script>
+	// တန်ဖိုးတွေကို အရယူချင်တာ ဆိုရင် get ကို သုံးသည်
+	// တန်ဖိုးတွေကို ထည့်ချင်တဲ့ အခါ set ကို သုံးသည်
+
+	$(document).ready(function(){
+		// getter section
+		// .html() ဆိုတာက အပေါ်မှာရှိတဲ့ htmlထဲကတန်ဖိုးတွေကို jquery ကနေ လှမ်းဖမ်းယူဖော်ပြခြင်း ဖြစ်သည်
+		// console.log($("h1").text());
+		// alert("HTML:"+$("h1").html());
+		// .val() ဆိုတာက အပေါ်မှာရှိတဲ့ inputbox ထဲက တန်ဖိုးကို jquery ကနေ လှမ်းဖမ်းယူဖော်ပြခြင်း ဖြစ်သည်
+		// $("button").click(function(){
+			// alert("your name is "+ $("input").val() +" Welccome to our website");
+
+			//.attr() ဆိုတာက အပေါ်မှာရှိတဲ့ html attribute တစ်ခုရဲ့ တန်းဖိုးကို လှမ်းဖမ်းယူဖော်ပြခြင်း ဖြစ်သည်
+			// let result =$("h1").attr("style");
+			// console.log(result);
+
+			// console.log($("#myFood").val());
+
+		// })
+
+		// getter section
+
+
+		// setter section
+
+		// set ဆိုတာ ကိုယ်တိုင် တန်ဖိုးတွေကို ထည်ံဖို့အတွက် အသုံးပြသည်။
+
+
+		// ဆိုလိုခြင်းမှာ h1 ထဲက ရှိနေပြီးတားစာသားကို ပြန်ပြောင်းခြင်း ဖြစ်သည်။
+		$("h1").html("update data");
+
+
+		// ရှိနှင့်ပြီးသား value ထဲကို တန်ဖိုး ထည့်ခြင်း ဖြစ်သည်။
+		$("#userName").val("hello welcome");
+		$("#myFood").val("Banana");
+		//ရှိနှင့်ပြီးသားattributeထဲကို တန်ဖိုး ထည့်ခြင်း ဖြစ်သည်။
+		$("h1").attr("title","this is update data!");
+		console.log($("h1").attr("title"));
+
+	});
+</script>
+</html> 
